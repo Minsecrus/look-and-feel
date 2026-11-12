@@ -6,11 +6,6 @@ export interface Topic {
   title: string;
 }
 
-export const parts: Record<Part, { title: string; en: string }> = {
-  look: { title: "顺眼", en: "Look" },
-  feel: { title: "顺手", en: "Feel" },
-};
-
 export const topics: readonly Topic[] = [
   { part: "look", slug: "scale", title: "尺度" },
   { part: "look", slug: "style", title: "风格" },
@@ -30,14 +25,4 @@ export const topics: readonly Topic[] = [
 
 export function topicPath(topic: Topic): string {
   return `/${topic.part}/${topic.slug}`;
-}
-
-export function findTopicByPath(pathname: string): Topic | undefined {
-  const clean = pathname.replace(/\/+$/, "");
-  return topics.find((t) => topicPath(t) === clean);
-}
-
-export function neighbors(topic: Topic): { prev?: Topic; next?: Topic } {
-  const i = topics.indexOf(topic);
-  return { prev: topics[i - 1], next: topics[i + 1] };
 }

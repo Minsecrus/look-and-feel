@@ -1,5 +1,5 @@
 cjk-punct-sans.woff2: subset of Noto Sans SC, Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.
-cjk-punct-serif.woff2: subset of Noto Serif SC, Copyright 2017-2024 Adobe (http://www.adobe.com/).
+display-*.woff2: subset of Resource Han Rounded CN, renamed "SYSS Display". Copyright 2018-2022 Cyano Hao. Portions (c) 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:

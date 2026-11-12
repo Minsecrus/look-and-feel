@@ -11,7 +11,6 @@
   gap: var(--space-4);
   padding-block: var(--space-3);
   padding-inline: max(var(--space-4), env(safe-area-inset-left)) max(var(--space-4), env(safe-area-inset-right));
-  font-family: var(--font-ui);
   font-size: var(--size-sm);
 }
 
@@ -21,9 +20,25 @@
   min-block-size: 44px;
   padding-inline: var(--space-2);
   margin-inline-start: calc(var(--space-2) * -1);
+  font-family: var(--font-heading);
   font-weight: var(--weight-strong);
   letter-spacing: 0.04em;
   border-radius: var(--radius-s);
+}
+
+.site-info {
+  display: grid;
+  place-items: center;
+  inline-size: 36px;
+  block-size: 36px;
+  margin-inline-end: calc(var(--space-2) * -1);
+  color: var(--text-3);
+}
+
+.site-info svg {
+  inline-size: 18px;
+  block-size: 18px;
+  stroke-width: 1.75;
 }
 
 .site-main {

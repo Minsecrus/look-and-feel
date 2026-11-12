@@ -7,13 +7,6 @@
   margin-block-start: 1em;
 }
 
-.prose-eyebrow {
-  font-family: var(--font-ui);
-  font-size: var(--size-sm);
-  color: var(--text-3);
-  letter-spacing: 0.08em;
-}
-
 .prose-title {
   font-family: var(--font-heading);
   font-size: var(--size-3xl);
@@ -93,14 +86,11 @@
   margin-block-start: var(--space-9);
   padding-block-start: var(--space-5);
   border-block-start: 1px solid var(--border);
-  font-family: var(--font-ui);
 }
 
 .prose-pager a {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-0);
-  padding-block: var(--space-2);
+  align-items: center;
   min-block-size: 44px;
   border-radius: var(--radius-s);
   color: inherit;
@@ -109,18 +99,9 @@
 
 .prose-pager a[rel="next"] {
   grid-column: 2;
-  text-align: end;
+  justify-content: end;
 }
 
-.prose-pager small {
-  font-size: var(--size-xs);
-  color: var(--text-3);
-}
-
-.prose-pager span {
-  font-size: var(--size-md);
-}
-
-.prose-pager a:hover span {
+.prose-pager a:hover {
   color: var(--accent-text);
 }

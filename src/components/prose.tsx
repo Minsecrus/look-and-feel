@@ -1,27 +1,23 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router";
-import { type Topic, neighbors, parts, topicPath } from "~/content/topics";
+import { type Topic, topicPath } from "~/content/topics";
+import { neighbors } from "~/content/written";
 
 export function Article({ topic, children }: { topic: Topic; children?: ReactNode }) {
   const { prev, next } = neighbors(topic);
   return (
     <article className="prose">
-      <header>
-        <p className="prose-eyebrow">{parts[topic.part].title}</p>
-        <h1 className="prose-title">{topic.title}</h1>
-      </header>
+      <h1 className="prose-title">{topic.title}</h1>
       {children}
       <nav className="prose-pager" aria-label="上下篇">
         {prev && (
           <Link to={topicPath(prev)} rel="prev">
-            <small>上一篇</small>
-            <span>{prev.title}</span>
+            {prev.title}
           </Link>
         )}
         {next && (
           <Link to={topicPath(next)} rel="next">
-            <small>下一篇</small>
-            <span>{next.title}</span>
+            {next.title}
           </Link>
         )}
       </nav>

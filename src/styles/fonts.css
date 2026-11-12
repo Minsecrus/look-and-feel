@@ -52,9 +52,50 @@
 }
 
 @font-face {
-  font-family: "SYSS Punct Serif";
-  src: url("../assets/fonts/cjk-punct-serif.woff2") format("woff2");
-  font-weight: 100 1000;
+  font-family: "SYSS Display";
+  src: url("../assets/fonts/display-extralight.woff2") format("woff2");
+  font-weight: 250;
   font-display: swap;
-  unicode-range: U+2014, U+2018-2019, U+201C-201D, U+2026;
+}
+
+@font-face {
+  font-family: "SYSS Display";
+  src: url("../assets/fonts/display-light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SYSS Display";
+  src: url("../assets/fonts/display-normal.woff2") format("woff2");
+  font-weight: 350;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SYSS Display";
+  src: url("../assets/fonts/display-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SYSS Display";
+  src: url("../assets/fonts/display-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SYSS Display";
+  src: url("../assets/fonts/display-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SYSS Display";
+  src: url("../assets/fonts/display-heavy.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
 }

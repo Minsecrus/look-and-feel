@@ -1,12 +1,8 @@
-[data-style],
-[data-mode] {
+html {
   background-color: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
-  font-weight: calc(var(--weight-body) + var(--weight-shift));
-}
-
-html {
+  font-weight: var(--weight-body);
   text-autospace: normal;
   text-spacing-trim: normal;
   hanging-punctuation: allow-end last;

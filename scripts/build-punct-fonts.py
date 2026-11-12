@@ -8,7 +8,6 @@ CODEPOINTS = [0x2014, 0x2018, 0x2019, 0x201C, 0x201D, 0x2026]
 
 JOBS = {
     "noto-sans-sc": "cjk-punct-sans.woff2",
-    "noto-serif-sc": "cjk-punct-serif.woff2",
 }
 
 for pkg, out_name in JOBS.items():

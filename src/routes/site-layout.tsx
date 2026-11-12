@@ -1,5 +1,5 @@
+import { Info } from "lucide-react";
 import { Link, Outlet } from "react-router";
-import { ThemeSwitcher } from "~/components/ThemeSwitcher";
 
 export default function SiteLayout() {
   return (
@@ -8,7 +8,9 @@ export default function SiteLayout() {
         <Link to="/" className="site-brand">
           顺眼顺手
         </Link>
-        <ThemeSwitcher />
+        <span className="site-info">
+          <Info aria-hidden />
+        </span>
       </header>
       <main className="site-main">
         <Outlet />
