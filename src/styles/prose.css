@@ -1,0 +1,126 @@
+.prose {
+  max-inline-size: var(--measure);
+  margin-inline: auto;
+}
+
+.prose > * + * {
+  margin-block-start: 1em;
+}
+
+.prose-eyebrow {
+  font-family: var(--font-ui);
+  font-size: var(--size-sm);
+  color: var(--text-3);
+  letter-spacing: 0.08em;
+}
+
+.prose-title {
+  font-family: var(--font-heading);
+  font-size: var(--size-3xl);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  margin-block: var(--space-2) var(--space-7);
+}
+
+.prose h2 {
+  font-family: var(--font-heading);
+  font-size: var(--size-xl);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  margin-block-start: 2.4em;
+  scroll-margin-block-start: var(--space-6);
+}
+
+.prose h3 {
+  font-family: var(--font-heading);
+  font-size: var(--size-lg);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-heading);
+  margin-block-start: 1.8em;
+  scroll-margin-block-start: var(--space-6);
+}
+
+.prose h2 + *,
+.prose h3 + * {
+  margin-block-start: 0.6em;
+}
+
+.prose a {
+  color: var(--accent-text);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in oklab, currentColor 40%, transparent);
+}
+
+.prose a:hover {
+  text-decoration-color: currentColor;
+}
+
+.prose :not(pre) > code {
+  font-size: 0.88em;
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-s);
+  background-color: var(--bg-subtle);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+.prose pre {
+  font-size: var(--size-sm);
+  line-height: 1.65;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-m);
+  background-color: var(--bg-sunken);
+  box-shadow: inset 0 0 0 1px var(--border);
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+@media (max-width: 559px) {
+  .prose pre {
+    margin-inline: calc(var(--space-4) * -1);
+    border-radius: 0;
+    box-shadow: inset 0 1px 0 var(--border), inset 0 -1px 0 var(--border);
+  }
+}
+
+.prose-pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-block-start: var(--space-9);
+  padding-block-start: var(--space-5);
+  border-block-start: 1px solid var(--border);
+  font-family: var(--font-ui);
+}
+
+.prose-pager a {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-0);
+  padding-block: var(--space-2);
+  min-block-size: 44px;
+  border-radius: var(--radius-s);
+  color: inherit;
+  text-decoration: none;
+}
+
+.prose-pager a[rel="next"] {
+  grid-column: 2;
+  text-align: end;
+}
+
+.prose-pager small {
+  font-size: var(--size-xs);
+  color: var(--text-3);
+}
+
+.prose-pager span {
+  font-size: var(--size-md);
+}
+
+.prose-pager a:hover span {
+  color: var(--accent-text);
+}

@@ -1,0 +1,60 @@
+/* PingFang has fixed weights; without these ranges 450 would resolve to Medium */
+@font-face {
+  font-family: "SYSS PingFang";
+  src: local("PingFangSC-Light"), local("PingFang SC Light");
+  font-weight: 100 349;
+}
+@font-face {
+  font-family: "SYSS PingFang";
+  src: local("PingFangSC-Regular"), local("PingFang SC Regular");
+  font-weight: 350 499;
+}
+@font-face {
+  font-family: "SYSS PingFang";
+  src: local("PingFangSC-Medium"), local("PingFang SC Medium");
+  font-weight: 500 579;
+}
+@font-face {
+  font-family: "SYSS PingFang";
+  src: local("PingFangSC-Semibold"), local("PingFang SC Semibold");
+  font-weight: 580 1000;
+}
+
+@font-face {
+  font-family: "SYSS Punct Sans";
+  src:
+    local("PingFangSC-Regular"),
+    local("PingFang SC Regular"),
+    url("../assets/fonts/cjk-punct-sans.woff2") format("woff2");
+  font-weight: 100 499;
+  font-display: swap;
+  unicode-range: U+2014, U+2018-2019, U+201C-201D, U+2026;
+}
+@font-face {
+  font-family: "SYSS Punct Sans";
+  src:
+    local("PingFangSC-Medium"),
+    local("PingFang SC Medium"),
+    url("../assets/fonts/cjk-punct-sans.woff2") format("woff2");
+  font-weight: 500 579;
+  font-display: swap;
+  unicode-range: U+2014, U+2018-2019, U+201C-201D, U+2026;
+}
+@font-face {
+  font-family: "SYSS Punct Sans";
+  src:
+    local("PingFangSC-Semibold"),
+    local("PingFang SC Semibold"),
+    url("../assets/fonts/cjk-punct-sans.woff2") format("woff2");
+  font-weight: 580 1000;
+  font-display: swap;
+  unicode-range: U+2014, U+2018-2019, U+201C-201D, U+2026;
+}
+
+@font-face {
+  font-family: "SYSS Punct Serif";
+  src: url("../assets/fonts/cjk-punct-serif.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-display: swap;
+  unicode-range: U+2014, U+2018-2019, U+201C-201D, U+2026;
+}
