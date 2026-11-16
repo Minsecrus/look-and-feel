@@ -1,6 +1,10 @@
 import type { Route } from "./+types/specimen";
 import "./specimen.css";
 
+export const handle = {
+  section: { title: "样张", to: "/specimen" },
+};
+
 export function meta(_: Route.MetaArgs) {
   return [{ title: "样张 · 顺眼顺手" }, { name: "robots", content: "noindex" }];
 }

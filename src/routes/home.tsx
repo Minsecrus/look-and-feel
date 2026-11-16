@@ -53,7 +53,7 @@ export default function Home() {
                 </li>
               ))}
             <li className="home-aside">
-              <span>{part === "look" ? "设计系统" : "参考资料"}</span>
+              {part === "look" ? <span>设计系统</span> : <Link to="/references">参考资料</Link>}
             </li>
           </ul>
         ))}

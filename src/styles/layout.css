@@ -14,16 +14,44 @@
   font-size: var(--size-sm);
 }
 
-.site-brand {
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-inline-size: 0;
+}
+
+.site-brand,
+.site-section {
   display: inline-flex;
   align-items: center;
   min-block-size: 44px;
   padding-inline: var(--space-2);
-  margin-inline-start: calc(var(--space-2) * -1);
   font-family: var(--font-heading);
-  font-weight: var(--weight-strong);
   letter-spacing: 0.04em;
   border-radius: var(--radius-s);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.site-brand {
+  margin-inline-start: calc(var(--space-2) * -1);
+  font-weight: var(--weight-strong);
+}
+
+.site-sep {
+  color: var(--text-3);
+  user-select: none;
+}
+
+.site-section {
+  color: var(--text-2);
+}
+
+@media (hover: hover) {
+  .site-brand:hover,
+  .site-section:hover {
+    color: var(--accent-text);
+  }
 }
 
 .site-info {

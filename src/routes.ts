@@ -12,6 +12,7 @@ export default [
   layout("routes/site-layout.tsx", [
     index("routes/home.tsx"),
     ...written.map((t) => route(topicPath(t).slice(1), articleFile(t.slug))),
+    route("references", "routes/references.tsx"),
     route("specimen", "routes/specimen.tsx"),
     route("*", "routes/not-found.tsx"),
   ]),

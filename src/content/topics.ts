@@ -7,6 +7,8 @@ export interface Topic {
 }
 
 export const topics: readonly Topic[] = [
+  { part: "look", slug: "content", title: "内容" },
+  { part: "look", slug: "layout", title: "划分" },
   { part: "look", slug: "scale", title: "尺度" },
   { part: "look", slug: "style", title: "风格" },
   { part: "look", slug: "density", title: "密度" },
@@ -17,6 +19,7 @@ export const topics: readonly Topic[] = [
   { part: "feel", slug: "order", title: "排序" },
   { part: "feel", slug: "filter", title: "筛选" },
   { part: "feel", slug: "empty", title: "空白" },
+  { part: "feel", slug: "click", title: "点击" },
   { part: "feel", slug: "input", title: "输入" },
   { part: "feel", slug: "wait", title: "等待" },
   { part: "feel", slug: "forgive", title: "容错" },

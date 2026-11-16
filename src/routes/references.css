@@ -1,0 +1,88 @@
+@layer components {
+  .references {
+    max-inline-size: var(--measure);
+    margin-inline: auto;
+  }
+
+  .references-title {
+    font-family: var(--font-heading);
+    font-size: var(--size-3xl);
+    font-weight: var(--weight-heading);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-heading);
+    margin-block: var(--space-2) var(--space-7);
+  }
+
+  .references-section + .references-section {
+    margin-block-start: var(--space-8);
+  }
+
+  .references-heading {
+    font-family: var(--font-heading);
+    font-size: var(--size-xl);
+    font-weight: var(--weight-heading);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-heading);
+    margin-block-end: var(--space-3);
+    scroll-margin-block-start: var(--space-6);
+  }
+
+  .references-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .references-item {
+    border-block-start: 1px solid var(--border);
+  }
+
+  .references-link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-1) var(--space-4);
+    min-block-size: 44px;
+    padding-block: var(--space-2);
+    padding-inline: var(--space-2);
+    margin-inline: calc(var(--space-2) * -1);
+    border-radius: var(--radius-s);
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  .references-name {
+    font-weight: var(--weight-strong);
+  }
+
+  .references-host {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    font-size: var(--size-sm);
+    color: var(--text-3);
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  .references-host svg {
+    flex: none;
+    inline-size: 0.95em;
+    block-size: 0.95em;
+    stroke-width: 1.75;
+    transition: translate var(--duration-fast) var(--ease-out);
+  }
+
+  @media (hover: hover) {
+    .references-link:hover .references-name {
+      color: var(--accent-text);
+    }
+
+    .references-link:hover .references-host {
+      color: var(--text-2);
+    }
+
+    .references-link:hover .references-host svg {
+      color: var(--accent-text);
+      translate: 1.5px -1.5px;
+    }
+  }
+}
