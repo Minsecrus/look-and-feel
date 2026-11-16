@@ -4,15 +4,6 @@
     margin-inline: auto;
   }
 
-  .references-title {
-    font-family: var(--font-heading);
-    font-size: var(--size-3xl);
-    font-weight: var(--weight-heading);
-    line-height: var(--leading-heading);
-    letter-spacing: var(--tracking-heading);
-    margin-block: var(--space-2) var(--space-7);
-  }
-
   .references-section + .references-section {
     margin-block-start: var(--space-8);
   }

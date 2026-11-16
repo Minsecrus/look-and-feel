@@ -87,7 +87,7 @@ export function meta(_: Route.MetaArgs) {
 export default function References() {
   return (
     <article className="references">
-      <h1 className="references-title">参考资料</h1>
+      <h1 className="visually-hidden">参考资料</h1>
 
       {GROUPS.map((group) => (
         <section key={group.id} className="references-section" aria-labelledby={group.id}>
