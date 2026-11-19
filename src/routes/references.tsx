@@ -31,6 +31,18 @@ const GROUPS: ReferenceGroup[] = [
         title: "Designing Interfaces",
         href: "https://www.oreilly.com/library/view/designing-interfaces-3rd/9781492051954/",
       },
+      {
+        title: "The Design of Everyday Things",
+        href: "https://jnd.org/the-design-of-everyday-things-revised-and-expanded-edition/",
+      },
+      {
+        title: "Designing with the Mind in Mind",
+        href: "https://shop.elsevier.com/books/designing-with-the-mind-in-mind/johnson/978-0-12-818202-4",
+      },
+      {
+        title: "The Visual Display of Quantitative Information",
+        href: "https://www.edwardtufte.com",
+      },
     ],
   },
   {
@@ -39,6 +51,16 @@ const GROUPS: ReferenceGroup[] = [
     items: [
       { title: "Web Interface Guidelines", href: "https://interfaces.rauno.me" },
       { title: "Laws of UX", href: "https://lawsofux.com" },
+      {
+        title: "10 Usability Heuristics for User Interface Design",
+        href: "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      },
+      {
+        title: "Ten Principles for Good Design",
+        href: "https://www.vitsoe.com/us/about/good-design",
+      },
+      { title: "Microsoft Inclusive Design", href: "https://inclusive.microsoft.design/" },
+      { title: "Deceptive Design", href: "https://deceptive.design" },
     ],
   },
   {
@@ -50,6 +72,9 @@ const GROUPS: ReferenceGroup[] = [
         href: "https://developer.apple.com/design/human-interface-guidelines",
       },
       { title: "Material Design 3", href: "https://m3.material.io/" },
+      { title: "Fluent 2", href: "https://fluent2.microsoft.design/" },
+      { title: "Command Line Interface Guidelines", href: "https://clig.dev/" },
+      { title: "ARIA Authoring Practices Guide (APG)", href: "https://www.w3.org/WAI/ARIA/apg/" },
     ],
   },
   {
@@ -65,6 +90,7 @@ const GROUPS: ReferenceGroup[] = [
       { title: "Frank Chimero", href: "https://frankchimero.com" },
       { title: "Andy Matuschak", href: "https://notes.andymatuschak.org" },
       { title: "Maggie Appleton", href: "https://maggieappleton.com" },
+      { title: "Bret Victor", href: "https://worrydream.com" },
     ],
   },
 ];
