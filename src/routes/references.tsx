@@ -26,14 +26,14 @@ const GROUPS: ReferenceGroup[] = [
         href: "https://anthonyhobday.com/sideprojects/saferules/",
       },
       { title: "Every Layout", href: "https://every-layout.dev" },
-      { title: "Don't Make Me Think", href: "https://sensible.com" },
+      { title: "Don't Make Me Think", href: "https://sensible.com/dont-make-me-think/" },
       {
         title: "Designing Interfaces",
         href: "https://www.oreilly.com/library/view/designing-interfaces-3rd/9781492051954/",
       },
       {
         title: "The Design of Everyday Things",
-        href: "https://jnd.org/the-design-of-everyday-things-revised-and-expanded-edition/",
+        href: "https://jnd.org/books/the-design-of-everyday-things-revised-and-expanded-edition/",
       },
       {
         title: "Designing with the Mind in Mind",
@@ -41,7 +41,7 @@ const GROUPS: ReferenceGroup[] = [
       },
       {
         title: "The Visual Display of Quantitative Information",
-        href: "https://www.edwardtufte.com",
+        href: "https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/",
       },
     ],
   },
