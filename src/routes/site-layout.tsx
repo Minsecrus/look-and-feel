@@ -1,7 +1,8 @@
 import type { MouseEvent } from "react";
 import { Info } from "lucide-react";
 import { Link, Outlet, useLocation, useMatches } from "react-router";
-import { topicPath, topics } from "~/content/topics";
+import { TopicSidebar } from "~/components/TopicSidebar";
+import { findWrittenEntry, topicEntryPath } from "~/content/written";
 
 export interface SectionInfo {
   title: string;
@@ -16,7 +17,7 @@ function normalizePath(path: string): string {
   return path.replace(/\/+$/, "") || "/";
 }
 
-function useCurrentSection(): SectionInfo | undefined {
+function useCurrentSection(activeTopic: ReturnType<typeof findWrittenEntry>): SectionInfo | undefined {
   const { pathname } = useLocation();
   const matches = useMatches();
   const clean = normalizePath(pathname);
@@ -28,12 +29,11 @@ function useCurrentSection(): SectionInfo | undefined {
     if (handle?.section) return handle.section;
   }
 
-  const matchedTopic = topics.find((t) => {
-    const base = topicPath(t);
-    return clean === base || clean.startsWith(`${base}/`);
-  });
-  if (matchedTopic) {
-    return { title: matchedTopic.title, to: topicPath(matchedTopic) };
+  if (activeTopic) {
+    return {
+      title: activeTopic.topic.title,
+      to: topicEntryPath(activeTopic.topic),
+    };
   }
 
   return undefined;
@@ -41,7 +41,8 @@ function useCurrentSection(): SectionInfo | undefined {
 
 export default function SiteLayout() {
   const { pathname } = useLocation();
-  const section = useCurrentSection();
+  const activeEntry = findWrittenEntry(pathname);
+  const section = useCurrentSection(activeEntry);
 
   function handleSectionClick(event: MouseEvent<HTMLAnchorElement>) {
     if (!section) return;
@@ -74,8 +75,17 @@ export default function SiteLayout() {
           <Info aria-hidden />
         </span>
       </header>
-      <main className="site-main">
-        <Outlet />
+      <main className={activeEntry ? "site-main site-main--topic" : "site-main"}>
+        {activeEntry ? (
+          <>
+            <TopicSidebar topic={activeEntry.topic} />
+            <div className="site-stage">
+              <Outlet />
+            </div>
+          </>
+        ) : (
+          <Outlet />
+        )}
       </main>
     </div>
   );

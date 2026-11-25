@@ -83,3 +83,21 @@
     padding-inline: var(--space-6);
   }
 }
+
+.site-main--topic {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(0, var(--measure)) minmax(0, 1fr);
+  column-gap: clamp(var(--space-5), 3.5vw, var(--space-7));
+  align-items: start;
+}
+
+.site-stage {
+  grid-column: 2;
+  min-inline-size: 0;
+}
+
+@media (max-width: 959px) {
+  .site-main--topic {
+    display: block;
+  }
+}

@@ -24,7 +24,7 @@
   --duration-fast: 120ms;
   --duration-base: 200ms;
 
-  --measure: 38em;
+  --measure: 42em;
 
   --font-body: "SYSS Punct Sans", "Quicksand Variable", "SYSS PingFang", "Noto Sans SC Variable", sans-serif;
   --font-heading: var(--font-body);

@@ -1,8 +1,8 @@
 import { Link } from "react-router";
 import { Eye, Zap } from "lucide-react";
 import { Minsecrus } from "~/components/Minsecrus";
-import { type Part, topicPath, topics } from "~/content/topics";
-import { isWritten } from "~/content/written";
+import { type Part, topics } from "~/content/topics";
+import { isWritten, topicEntryPath } from "~/content/written";
 import type { Route } from "./+types/home";
 import "./home.css";
 
@@ -49,7 +49,7 @@ export default function Home() {
               .filter((t) => t.part === part)
               .map((t) => (
                 <li key={t.slug}>
-                  {isWritten(t) ? <Link to={topicPath(t)}>{t.title}</Link> : <span>{t.title}</span>}
+                  {isWritten(t) ? <Link to={topicEntryPath(t)}>{t.title}</Link> : <span>{t.title}</span>}
                 </li>
               ))}
             <li className="home-aside">

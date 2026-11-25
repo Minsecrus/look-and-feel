@@ -1,0 +1,92 @@
+@layer demos {
+  .player-outline-grid {
+    display: grid;
+    grid-template-columns: 248px minmax(0, 1fr);
+    gap: var(--space-5);
+    align-items: start;
+  }
+
+  .player-outline-list {
+    display: flex;
+    flex-direction: column;
+    border-block-start: 1px solid var(--border);
+  }
+
+  .player-outline-item {
+    border-block-end: 1px solid var(--border);
+  }
+
+  .player-outline-row {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    inline-size: 100%;
+    padding: var(--space-3) var(--space-4);
+    text-align: start;
+    transition: background-color var(--duration-fast) var(--ease-out);
+  }
+
+  .player-outline-row::before {
+    content: "";
+    position: absolute;
+    inset-block: var(--space-2);
+    inset-inline-start: 0;
+    inline-size: 2px;
+    border-radius: 1px;
+    background-color: transparent;
+    transition: background-color var(--duration-fast) var(--ease-out);
+  }
+
+  .player-outline-row.is-active {
+    background-color: rgb(15 23 41 / 0.035);
+  }
+
+  .player-outline-row.is-active::before {
+    background-color: var(--accent);
+  }
+
+  .player-outline-label {
+    font-size: var(--size-sm);
+    font-weight: var(--weight-strong);
+    color: var(--text);
+  }
+
+  .player-outline-detail {
+    font-size: var(--size-sm);
+    line-height: 1.6;
+    color: var(--text-2);
+  }
+
+  .player-outline-screen {
+    inline-size: 100%;
+  }
+
+  .player-outline-spotlight {
+    position: absolute;
+    inset-inline: 3%;
+    border: 1.5px solid rgb(255 255 255 / 0.92);
+    border-radius: var(--radius-s);
+    box-shadow: 0 0 0 9999px rgb(15 23 41 / 0.46);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      opacity var(--duration-fast) var(--ease-out),
+      top var(--duration-base) var(--ease-out),
+      height var(--duration-base) var(--ease-out);
+  }
+
+  .player-outline-spotlight.is-visible {
+    opacity: 1;
+  }
+
+  @media (max-width: 679px) {
+    .player-outline-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .player-outline-screen {
+      max-inline-size: 260px;
+    }
+  }
+}
