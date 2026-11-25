@@ -78,6 +78,23 @@ const GROUPS: ReferenceGroup[] = [
     ],
   },
   {
+    id: "design-systems",
+    heading: "设计系统",
+    items: [
+      { title: "Vercel Geist", href: "https://vercel.com/geist/introduction" },
+      { title: "GitHub Primer", href: "https://primer.style/product/" },
+      { title: "Shopify App Design Guidelines", href: "https://shopify.dev/docs/apps/design" },
+      { title: "Atlassian Design System", href: "https://atlassian.design/design-system" },
+      {
+        title: "IBM Carbon Design System",
+        href: "https://www.carbondesignsystem.com/getting-started/about-carbon",
+      },
+      { title: "Adobe Spectrum", href: "https://spectrum.adobe.com/page/principles/" },
+      { title: "Nord Design System", href: "https://nordhealth.design/design/foundations" },
+      { title: "GOV.UK Design System", href: "https://design-system.service.gov.uk/styles/" },
+    ],
+  },
+  {
     id: "blogs",
     heading: "设计师站点",
     items: [
